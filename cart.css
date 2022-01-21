@@ -1,0 +1,160 @@
+body{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+}
+.container{
+    display: flex;
+    border: 1px solid grey;
+    width: 400px;
+    border-radius: 5px;
+    margin-left: 190px;
+    justify-content: space-around;
+}
+.flex{
+    margin-left: 20px;
+}
+#main{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 100px;
+}
+.safeUpto{
+    display: flex;
+    border: 1px dashed teal;
+    border-radius: 5px;
+}
+.truckImge{
+    width: 60px;
+    height: 60px;
+}
+.truckTxt{
+    margin-top: 30px;
+    margin-left: 10px;
+    color: #4f585e;
+    
+}
+.addressBtn{
+    margin-bottom: 30px;
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #10847e;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+}
+.cartBox{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: #4f585e;
+    font-weight: 500;
+}
+.finalBox{
+    display: flex;
+    justify-content: space-between;
+    color: #4f585e;
+    font-weight: 500;
+}
+#textHead{
+    font-size: 20px;
+    font-weight: 700;
+    color:#4f585e ;
+}
+.amount{
+    color:#4f585e ;
+}
+.deliveryTime{
+    font-weight: 600;
+    color: #4f585e;
+}
+.ordersummaryHead{
+    color:#4f585e ;
+    font-weight: 700;
+    font-size: 20px;
+}
+.itemsInCart{
+    color: #4f585e;
+    margin-left: 100px;
+}
+.removeBtn{
+    /* margin-top: 95px; */
+    color:#4f585e ;
+    margin-left: 10px;
+}
+
+/* navbar */
+.teal{
+    background-color: #10847e;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-weight: 450; */
+    /* font-size: 29px; */
+    margin-bottom: 30px;
+}
+.first{
+    display: flex;
+    /* justify-content: space-evenly; */
+    
+}
+.mainLogo{
+    height: 50px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.search{
+    width: 700px;
+    height: 50px;
+    margin-left: 100px;
+    margin-top: 10px;
+    border-radius: 5px;
+    /* font-size: 14px; */
+}
+.second{
+    display: flex;
+    color: #f7f9fb;
+    font-size: 18px;
+    margin-left: 50px;
+    justify-content: space-around;
+    font-weight: 400;
+}
+.login{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 500px;
+    
+}
+/* .login {
+    margin-left: 60px;
+} */
+.categories{
+    display: flex;
+    margin-left: 20px;
+    justify-content: space-around;
+    /* margin-right: 10px; */
+    
+}
+.categories >p {
+    margin-left: 15px;
+
+}
+.offer{
+    display: flex;
+    margin-left: 20px;
+}
+.signup{
+    display: flex;
+    margin-left: 20px;
+}
+.cartIcon{
+    display: flex;
+    margin-left: 20px;
+}
+.icon{
+    height: 25px;
+    margin-top: 18px;
+    margin-right: 5px;
+}

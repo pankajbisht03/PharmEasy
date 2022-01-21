@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="icon" href="https://d3ulwu8fab47va.cloudfront.net/media/favicon/default/favicon.ico"> -->
+</head>
+    <style>
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    body{
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: sans-serif;
+        color: #4f585e;
+        /* background-color: teal; */
+        background: linear-gradient(#e66465, #9198e5);
+    }
+    
+    .container{
+        width: 750px;
+        height: 500px;
+        border: 1px solid;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        justify-content:space-around;
+        border-radius: 20px;
+        box-shadow: thistle;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+        border: none;
+    }
+    
+    .container h1{
+        text-align: center;
+    }
+    
+    .first-row{
+         display: flex;
+    }
+    
+    .owner{
+        width: 100%;
+        margin-right: 40px;
+    }
+    
+    .input-field{
+        border: 1px solid #999;
+    }
+    
+    .input-field input{
+        width: 100%;
+        border:none;
+        outline: none;
+        padding: 10px;
+    }
+    
+    .selection{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .selection select{
+        padding: 10px 20px;
+    }
+    #btn{
+        width: 60%;
+        margin-left: 130px;
+        background-color:#10847e;
+        border-radius: 30px;
+        border:0;
+        padding: 15px;
+        font-size: large;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: sans-serif;
+        color: white;
+    }
+    #month{
+        font-family: sans-serif;
+    }
+    #years{
+        font-family: sans-serif;
+    }
+    .images{
+        height:100px; width:100px;
+    }
+    .third-row h3{
+margin-bottom: -20px;
+    }
+    .owner h3{
+      
+    }
+</style>
+<body>
+        <div class="container">
+            <h1>Confirm Your Payment</h1>
+            <div class="first-row">
+                <div class="owner">
+                    <h3>Card Holder Name</h3>
+                    <div class="input-field">
+                        <input type="text" id="name">
+                    </div>
+                </div>
+                <div class="cvv">
+                    <h3>CVV</h3>
+                    <div class="input-field">
+                        <input type="password" id="cvv">
+                    </div>
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="card-number">
+                    <h3>Card Number</h3>
+                    <div class="input-field">
+                        <input type="number" id="cNumber">
+                    </div>
+                </div>
+            </div>
+            <div class="third-row">
+                <h3 >Expiration Date</h3>
+                <div class="selection">
+                    <div class="date">
+                        <select name="months" id="months">
+                            <option value="Jan">Jan</option>
+                            <option value="Feb">Feb</option>
+                            <option value="Mar">Mar</option>
+                            <option value="Apr">Apr</option>
+                            <option value="May">May</option>
+                            <option value="Jun">Jun</option>
+                            <option value="Jul">Jul</option>
+                            <option value="Aug">Aug</option>
+                            <option value="Sep">Sep</option>
+                            <option value="Oct">Oct</option>
+                            <option value="Nov">Nov</option>
+                            <option value="Dec">Dec</option>
+                          </select>
+                          <select name="years" id="years">
+                            <option value="2019">2021</option>
+                            <option value="2020">2022</option>
+                            <option value="2019">2023</option>
+                            <option value="2018">2024</option>
+                            <option value="2017">2025</option>
+                          </select>
+                    </div>
+                    <div class="cards">
+                        <img class="images" src="https://tse3.mm.bing.net/th?id=OIP.CSv0D_Pv2hzbhGo6UWoLAgHaHa&pid=Api&P=0&w=300&h=300" alt="">
+                        <img class="images"src="https://tse1.mm.bing.net/th?id=OIP.iJYcCif41jN7RDXRV0QgbwHaHa&pid=Api&P=0&w=300&h=300" alt="">
+                        <img class="images"src="https://tse2.mm.bing.net/th?id=OIP.-YMT28Jt9-BN4QYvpZ0_XgHaHa&pid=Api&P=0&w=300&h=300" alt="">
+                    </div>
+                </div>    
+            </div>
+           
+            <button id="btn" >Pay Now</button>
+        </div>
+        
+    </body>
+    </html>
+
+<script>
+    
+
+    document.getElementById("btn").addEventListener("click", check);
+
+    function check(){
+        var cvv = document.getElementById("cvv").value;
+        var cNumber = document.getElementById("cNumber").value;
+        var name = document.getElementById("name").value
+        
+        if(name.length<=0){
+            alert("Please Enter Card Holder Name")
+        }else if(cvv.length!==3){
+            alert("Invalid CVV");
+        }else if(cNumber.length!==16){
+            alert("Invalid Card Number")
+        }else{
+            alert("Order Placed Successfully")
+            window.location.href = "nav.html"
+        }
+        // console.log("Hello");
+        
+    }
+
+</script>
